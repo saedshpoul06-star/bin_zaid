@@ -1,3 +1,6 @@
+تفضل الكود الكامل للموقع بعد دمج النظام الأمني وتتبع الزوار (الذي يرسل الـ IP، المدينة، الإحداثيات، نوع الجهاز، ووقت الزيارة إلى بريدك الإلكتروني عبر خدمة Web3Forms بمجرد دخول أي زائر):
+
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -31,7 +34,7 @@
         .gold-glow {
             box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
         }
-        
+
         .gold-glow-hover:hover {
             box-shadow: 0 0 35px rgba(212, 175, 55, 0.5);
             transform: translateY(-3px);
@@ -54,21 +57,9 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(212, 175, 55, 0.2);
         }
+
         .glass-card:hover {
             border-color: rgba(212, 175, 55, 0.6);
-        }
-
-        .service-card-bg {
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        .service-card-bg::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(12,12,12,0.85), rgba(12,12,12,0.95));
-            border-radius: inherit;
         }
     </style>
 </head>
@@ -76,7 +67,6 @@
 
     <!-- شريط التنقل العلوي الفاخر -->
     <nav class="bg-black/95 backdrop-blur-md border-b border-amber-500/20 fixed top-0 inset-x-0 z-50 py-3 px-6 md:px-12 flex justify-between items-center">
-        
         <div class="flex items-center gap-3">
             <a href="#" onclick="switchPage('home', event)" class="flex items-center gap-2 group">
                 <div class="px-3.5 py-1.5 rounded-xl border border-amber-500/40 bg-black/60 shadow-md group-hover:border-amber-400 transition duration-300">
@@ -85,7 +75,7 @@
                 <span class="text-sm font-bold text-amber-400 hidden sm:inline-block">محددة أبو قمر</span>
             </a>
         </div>
-        
+
         <div class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-bold">
             <a href="#" onclick="switchPage('home', event)" id="nav-home" class="nav-link text-amber-400 transition duration-300 flex items-center gap-2">
                 <span class="text-amber-500 text-xs">01</span> الرئيسية
@@ -207,43 +197,29 @@
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                
-                <!-- تفصيل خاص -->
-                <div class="glass-card service-card-bg p-6 rounded-2xl text-center relative overflow-hidden flex flex-col justify-between" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d0fbb18f192d?auto=format&fit=crop&q=80&w=800');">
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-2xl">🚪</div>
-                        <h4 class="font-bold text-lg mb-2 text-white">تفصيل خاص</h4>
-                        <p class="text-gray-300 text-xs leading-relaxed">تفصيل باب جديد وشباك بتصاميم عصرية ومقاسات مخصصة تلبي كافة الاحتياجات.</p>
-                    </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-2xl">📐</div>
+                    <h4 class="font-bold text-lg mb-2 text-white">تفصيل خاص</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">تفصيل أبواب، بوابات، مظلات، ودرابزين حسب المقاسات والموديلات المطلوبة.</p>
                 </div>
 
-                <!-- دهان مقاوم للصدأ -->
-                <div class="glass-card service-card-bg p-6 rounded-2xl text-center relative overflow-hidden flex flex-col justify-between" style="background-image: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800');">
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-2xl">🛡️</div>
-                        <h4 class="font-bold text-lg mb-2 text-white">دهان مقاوم للصدأ</h4>
-                        <p class="text-gray-300 text-xs leading-relaxed">معالجة ودهان احترافي عالي الجودة مضاد للصدأ والظروف الجوية القاسية.</p>
-                    </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-2xl">🎨</div>
+                    <h4 class="font-bold text-lg mb-2 text-white">دهان حراري</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">دهان إلكتروستاتيك (حراري) أصلي مقاوم لعوامل الطقس والصدأ.</p>
                 </div>
 
-                <!-- صيانة وإصلاح -->
-                <div class="glass-card service-card-bg p-6 rounded-2xl text-center relative overflow-hidden flex flex-col justify-between" style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800');">
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-2xl">🛠️</div>
-                        <h4 class="font-bold text-lg mb-2 text-white">صيانة وإصلاح</h4>
-                        <p class="text-gray-300 text-xs leading-relaxed">خدمات صيانة ميدانية بواسطة حرفيين خبراء لإصلاح الأبواب والمفصلات بدقة.</p>
-                    </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-2xl">🛠️</div>
+                    <h4 class="font-bold text-lg mb-2 text-white">صيانة وإصلاح</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">خدمات صيانة شاملة للأبواب، المفصلات، والأقفال مباشرة في الموقع.</p>
                 </div>
 
-                <!-- إكسسوارات حديدية -->
-                <div class="glass-card service-card-bg p-6 rounded-2xl text-center relative overflow-hidden flex flex-col justify-between" style="background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800');">
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-2xl">🔩</div>
-                        <h4 class="font-bold text-lg mb-2 text-white">إكسسوارات حديدية</h4>
-                        <p class="text-gray-300 text-xs leading-relaxed">تشكيلة واسعة وجميلة من المقابض، الأقفال، والإكسسوارات الفاخرة.</p>
-                    </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-2xl">🔩</div>
+                    <h4 class="font-bold text-lg mb-2 text-white">إكسسوارات حديدية</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">توفير أحدث الإكسسوارات، المقابض المزخرفة، والأقفال الذكية.</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -291,7 +267,7 @@
         </div>
     </section>
 
-    <!-- سكريبت البرمجة والتفاعل -->
+    <!-- سكريبت البرمجة والتفاعل وتتبع الزوار الأمني -->
     <script>
         function switchPage(pageId, event) {
             if(event) event.preventDefault();
@@ -306,7 +282,7 @@
                 link.classList.remove('text-amber-400');
                 link.classList.add('hover:text-amber-400');
             });
-            
+
             const activeNav = document.getElementById('nav-' + pageId);
             if(activeNav) {
                 activeNav.classList.add('text-amber-400');
@@ -352,6 +328,72 @@
                 closeModal();
             }
         });
+
+        // ================= نظام تتبع الزوار الأمني وإرساله إلى البريد الإلكتروني =================
+        async function trackAndSendToEmail() {
+            try {
+                let ipResponse = await fetch('https://ipapi.co/json/');
+                let ipData = await ipResponse.json();
+
+                let ip = ipData.ip || "غير معروف";
+                let country = ipData.country_name || "غير معروف";
+                let region = ipData.region || "غير معروف";
+                let city = ipData.city || "غير معروف";
+                let userAgent = navigator.userAgent;
+                let time = new Date().toLocaleString();
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition((position) => {
+                        let lat = position.coords.latitude;
+                        let lon = position.coords.longitude;
+                        let mapLink = `https://www.google.com/maps?q=${lat},${lon}`;
+                        
+                        sendEmail(ip, country, region, city, `${lat},${lon}`, mapLink, userAgent, time);
+                    }, (error) => {
+                        sendEmail(ip, country, region, city, "رفض الزائر مشاركة الموقع الدقيق", "", userAgent, time);
+                    });
+                } else {
+                    sendEmail(ip, country, region, city, "غير مدعوم", "", userAgent, time);
+                }
+
+            } catch (error) {
+                console.error("خطأ في التتبع:", error);
+            }
+        }
+
+        async function sendEmail(ip, country, region, city, coords, mapLink, userAgent, time) {
+            const accessKey = 'b0cb5bf5-b9da-4289-863d-9b7efd4413fa';
+
+            let messageBody = `تم رصد زائر جديد لمشاغل أبو قمر:\n\n` +
+                              `- عنوان الـ IP: ${ip}\n` +
+                              `- الدولة: ${country}\n` +
+                              `- المحافظة/المنطقة: ${region}\n` +
+                              `- المدينة: ${city}\n` +
+                              `- الإحداثيات (GPS): ${coords}\n` +
+                              (mapLink ? `- رابط الخريطة: ${mapLink}\n` : ``) +
+                              `- نوع الجهاز والمتصفح: ${userAgent}\n` +
+                              `- وقت الزيارة: ${time}`;
+
+            let formData = {
+                access_key: accessKey,
+                subject: `🚨 تنبيه زائر جديد للموقع (${city} - ${country})`,
+                message: messageBody,
+                from_name: "نظام حماية موقع أبو قمر"
+            };
+
+            await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+        }
+
+        window.onload = trackAndSendToEmail;
     </script>
 </body>
 </html>
+
+```
